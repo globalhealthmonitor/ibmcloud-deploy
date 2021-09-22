@@ -44,7 +44,7 @@ jobs:
         run: |
           docker push $REGISTRY_HOSTNAME/$ICR_NAMESPACE/$IMAGE_NAME:$IMAGE_TAG
 
-      - uses: globalhealthmonitor/ibmcloud-deploy@v1.6
+      - uses: globalhealthmonitor/ibmcloud-deploy@v1.8
         with:
           bucket-name: ${{ secrets.BUCKET_NAME_DEPLOY }}
           helm-name: ${{ secrets.PROJECT_BUCKET_NAME }}
